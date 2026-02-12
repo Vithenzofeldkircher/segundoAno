@@ -28,9 +28,9 @@ public class Plataform_Movement : MonoBehaviour
         }
     }
 
-    private void OnValidate()
-    {
-        GetComponent<Rigidbody2D>().gravityScale = 0;
-    }
+   // private void OnValidate()
+   // {
+   //     GetComponent<Rigidbody2D>().gravityScale = 0;
+   // }
 
 }
