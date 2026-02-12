@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-public class Lever : MonoBehaviour, Interactable
+public class Lever : MonoBehaviour, IInteractable
 {
     [SerializeField] private UnityEvent On_Active;
     [SerializeField] private UnityEvent On_Desactive;
@@ -22,7 +22,6 @@ public class Lever : MonoBehaviour, Interactable
 
     public void Active()
     {
-
         if (_Is_Active)
         {
             On_Desactive.Invoke();

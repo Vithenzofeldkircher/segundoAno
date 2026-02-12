@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Interaction : MonoBehaviour
 {
-    private Interactable _Target;
+    private IInteractable _Target;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -13,6 +13,7 @@ public class Interaction : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         if (_Target == null)
             return;
         if (Input.GetButtonDown("Fire1"))
@@ -27,5 +28,9 @@ public class Interaction : MonoBehaviour
         {
 
         }
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        _Target = null;
     }
 }

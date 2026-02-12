@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public interface Interactable
+public interface IInteractable
 {
     public void Active();
 }
