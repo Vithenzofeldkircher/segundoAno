@@ -6,6 +6,7 @@ public class Plataform_Movement : MonoBehaviour, IStatusPlayer, Psyhic_Player
 {
     private Rigidbody2D _rb;
     private float _horizontal;
+    private float _Last_Horizontal;
     [SerializeField] private float _Speed = 5;
     [SerializeField] private float _jump_Force = 250;
 
@@ -31,6 +32,22 @@ public class Plataform_Movement : MonoBehaviour, IStatusPlayer, Psyhic_Player
         {
             _rb.AddForce(new Vector2(0, _jump_Force));
         }
+
+        if(_horizontal == 0)
+        {
+            Game_Controller.instance.On_Player_Move_End.Invoke();
+        }
+
+        else
+        {
+            if(_Last_Horizontal != _horizontal)
+            {
+                Game_Controller.instance.On_Player_Move_Begin.Invoke();
+                _Last_Horizontal = _horizontal;
+            }
+            
+        }
+        
     }
 
    // private void OnValidate()

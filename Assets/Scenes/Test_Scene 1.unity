@@ -354,6 +354,60 @@ Transform:
   - {fileID: 1934508341}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &216442788
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 216442789}
+  - component: {fileID: 216442790}
+  m_Layer: 0
+  m_Name: Game_Controller
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &216442789
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 216442788}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.18847, y: -0.9961, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &216442790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 216442788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b07c58df17f2ef46b7aa1e126f21af6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Game_Controller
+  _Is_Game_Runiig: 0
+  On_Player_Move_Begin:
+    m_PersistentCalls:
+      m_Calls: []
+  On_Player_Move_End:
+    m_PersistentCalls:
+      m_Calls: []
+  On_Game_Begin:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &328212709
 GameObject:
   m_ObjectHideFlags: 0
@@ -762,7 +816,7 @@ Transform:
   m_GameObject: {fileID: 818204175}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.50521, y: 0.03051, z: 0}
+  m_LocalPosition: {x: 7.23, y: -0.91, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1575,7 +1629,7 @@ GameObject:
   - component: {fileID: 1934508342}
   - component: {fileID: 1934508344}
   m_Layer: 0
-  m_Name: Sprite
+  m_Name: Sprite_Idle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1769,3 +1823,4 @@ SceneRoots:
   - {fileID: 1135122155}
   - {fileID: 328212713}
   - {fileID: 818204179}
+  - {fileID: 216442789}
