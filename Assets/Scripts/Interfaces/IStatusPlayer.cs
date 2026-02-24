@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class IStatusPlayer
+public interface IStatusPlayer
 {
     
 }

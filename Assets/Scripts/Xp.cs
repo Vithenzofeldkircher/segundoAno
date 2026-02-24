@@ -11,7 +11,7 @@ public class Xp : MonoBehaviour, IMagenetizablw, Itouchable
         _Can_Move = true;
         _Origem = target;
 
-        //gameObject.SetActive(false);
+        gameObject.SetActive(false);
         Debug.Log("Item coletado");
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -34,6 +34,6 @@ public class Xp : MonoBehaviour, IMagenetizablw, Itouchable
     }
     public void Active()
     {
-        Destroy(gameObject);
+        Destroy(this);
     }
 }

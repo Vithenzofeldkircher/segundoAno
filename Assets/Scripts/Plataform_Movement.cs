@@ -2,12 +2,17 @@ using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D), typeof(BoxCollider2D))]
 
-public class Plataform_Movement : MonoBehaviour
+public class Plataform_Movement : MonoBehaviour, IStatusPlayer, Psyhic_Player
 {
     private Rigidbody2D _rb;
     private float _horizontal;
     [SerializeField] private float _Speed = 5;
     [SerializeField] private float _jump_Force = 250;
+
+    //float Psyhic_Player.Horizontal => throw new System.NotImplementedException();
+    public float Horizontal => _horizontal;
+    //Transform Psyhic_Player.transform => throw new System.NotImplementedException();
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
